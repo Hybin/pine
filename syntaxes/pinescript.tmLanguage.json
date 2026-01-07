@@ -3,10 +3,46 @@
 	"name": "Pine Script",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#declaration"
+		},
+		{
+			"include": "#comments"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#boolean"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#reserves"
+		},
+		{
+			"include": "#object"
+		},
+		{
+			"include": "#method"
+		},
+		{
+			"include": "#property"
+		},
+		{
+			"include": "#callable"
+		},
+		{
+			"include": "#arguments"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#keywords"
 		}
 	],
 	"repository": {
@@ -14,6 +50,12 @@
 			"patterns": [{
 				"name": "keyword.control.pinescript",
 				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"reserves": {
+			"patterns": [{
+				"name": "variable.language.readonly.pinescript",
+				"match": "\\b(open|high|low|close|volume|time)\\b"
 			}]
 		},
 		"strings": {
@@ -26,6 +68,77 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"comments": {
+			"name": "comment.line.pinescript",
+			"begin": "//",
+			"end": "\n",
+			"patterns": [
+				{
+					"name": "comment.line.pinescript",
+					"match": "//.*"
+				}
+			]
+		},
+		"declaration": {
+			"name": "constant.string.declaration.pinescript",
+			"match": "//\\s*@version=\\d+"
+		},
+		"callable": {
+			"name": "entity.name.function.pinescript",
+			"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\s*\\()"
+		},
+		"arguments": {
+			"name": "entity.name.function.argument.pinescript",
+			"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\s*=)"
+		},
+		"boolean": {
+			"name": "keyword.operator.pinescript",
+			"match": "\\b(true|false)\\b"
+		},
+		"number": {
+			"name": "constant.numeric.pinescript",
+			"match": "\\b\\d+(\\.\\d+)?\\b"
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.arithmetic.pinescript",
+					"match": "\\+|-|\\*|/"
+				},
+				{
+					"name": "keyword.operator.assignment.pinescript",
+					"match": "="
+				},
+				{
+					"name": "keyword.operator.comparison.pinescript",
+					"match": "==|!=|<|>|<=|>="
+				},
+				{
+					"name": "keyword.operator.logical.pinescript",
+					"match": "&&|\\|\\|"
+				}
+			]
+		},
+		"object": {
+			"name": "variable.other.object.pinescript",
+			"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\s*\\.)"
+		},
+		"property": {
+			"name": "variable.other.property.pinescript",
+			"match": "(?<=\\.)\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?!\\s*\\()"
+		},
+		"method": {
+			"name": "entity.name.function.pinescript",
+			"match": "(?<=\\.)\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\s*\\()"
+		},
+		"variable": {
+			"name": "variable.other.readwrite.pinescript",
+			"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?!\\s*=|\\s*\\.|\\s*\\()"
+		},
+		"color": {
+			"name": "constant.color.pinescript",
+			"match": "(?<=\\.)\\b(blue|orange|red|green|yellow|white|black|gray)\\b"
 		}
 	},
 	"scopeName": "source.pine"
