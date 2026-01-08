@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@types/vscode':
-        specifier: ^1.107.0
-        version: 1.107.0
+        specifier: ^1.84.0
+        version: 1.84.0
       esbuild:
         specifier: 0.27.2
         version: 0.27.2
@@ -176,8 +176,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@types/vscode@1.107.0':
-    resolution: {integrity: sha512-XS8YE1jlyTIowP64+HoN30OlC1H9xqSlq1eoLZUgFEC8oUTO6euYZxti1xRiLSfZocs4qytTzR6xCBYtioQTCg==}
+  '@types/vscode@1.84.0':
+    resolution: {integrity: sha512-lCGOSrhT3cL+foUEqc8G1PVZxoDbiMmxgnUZZTEnHF4mC47eKAUtBGAuMLY6o6Ua8PAuNCoKXbqPmJd1JYnQfg==}
 
   esbuild@0.27.2:
     resolution: {integrity: sha512-HyNQImnsOC7X9PMNaCIeAm4ISCQXs5a5YasTXVliKv4uuBo1dKrG0A+uQS8M5eXjVMnLg3WgXaKvprHlFJQffw==}
@@ -278,7 +278,7 @@ snapshots:
   '@esbuild/win32-x64@0.27.2':
     optional: true
 
-  '@types/vscode@1.107.0': {}
+  '@types/vscode@1.84.0': {}
 
   esbuild@0.27.2:
     optionalDependencies:
