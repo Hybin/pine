@@ -17,6 +17,10 @@
   ],
   "main": "./artifacts/extension.js",
   "icon": "assets/icon-ext.png",
+  "scripts": {
+    "build": "node esbuild.config.js --production",
+    "watch": "node esbuild.config.js --watch"
+  },
   "contributes": {
     "languages": [
       {
@@ -46,10 +50,7 @@
   "devDependencies": {
     "@types/vscode": "^1.84.0",
     "esbuild": "0.27.2",
-    "fs-extra": "^11.3.3"
-  },
-  "scripts": {
-    "build": "node esbuild.config.js --production",
-    "watch": "node esbuild.config.js --watch"
+    "fs-extra": "^11.3.3",
+    "typescript": "^5.9.3"
   }
 }
