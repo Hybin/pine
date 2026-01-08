@@ -10,22 +10,41 @@
   "categories": [
     "Programming Languages"
   ],
+  "main": "./artifacts/extension.js",
   "icon": "assets/icon-ext.png",
   "contributes": {
-    "languages": [{
-      "id": "pinescript",
-      "aliases": ["Pine Script", "pinescript"],
-      "extensions": ["pine"],
-      "configuration": "./language-configuration.json",
-      "icon": {
-        "light": "./assets/icon-lite-d.svg",
-        "dark": "./assets/icon-lite-l.svg"
+    "languages": [
+      {
+        "id": "pinescript",
+        "aliases": [
+          "Pine Script",
+          "pinescript"
+        ],
+        "extensions": [
+          "pine"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./assets/icon-lite-d.svg",
+          "dark": "./assets/icon-lite-l.svg"
+        }
       }
-    }],
-    "grammars": [{
-      "language": "pinescript",
-      "scopeName": "source.pine",
-      "path": "./syntaxes/pinescript.tmLanguage.json"
-    }]
+    ],
+    "grammars": [
+      {
+        "language": "pinescript",
+        "scopeName": "source.pine",
+        "path": "./syntaxes/pinescript.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.107.0",
+    "esbuild": "0.27.2",
+    "fs-extra": "^11.3.3"
+  },
+  "scripts": {
+    "build": "node esbuild.config.js --production",
+    "watch": "node esbuild.config.js --watch"
   }
 }
