@@ -15,6 +15,12 @@
 			"include": "#boolean"
 		},
 		{
+			"include": "#type"
+		},
+		{
+			"include": "#varDeclaration"
+		},
+		{
 			"include": "#number"
 		},
 		{
@@ -49,7 +55,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.pinescript",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(if|while|for|return|switch)\\b"
 			}]
 		},
 		"reserves": {
@@ -95,6 +101,14 @@
 		"boolean": {
 			"name": "keyword.operator.pinescript",
 			"match": "\\b(true|false)\\b"
+		},
+		"type": {
+			"name": "storage.type.pinescript",
+			"match": "\\b(int|float|bool|string|color|label|line|box|table)\\b(?=\\s+[a-zA-Z_][a-zA-Z0-9_]*\\b\\s*=)"
+		},
+		"varDeclaration": {
+			"name": "keyword.declaration.pinescript",
+			"match": "\\b(varip|var|const|enum)\\b(?=\\s+[a-zA-Z_][a-zA-Z0-9_]*)"
 		},
 		"number": {
 			"name": "constant.numeric.pinescript",

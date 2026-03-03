@@ -7,7 +7,7 @@
 
     "module": "commonjs",
     "target": "es6",
-    "lib": ["ES2020"],
+    "lib": ["esnext"],
     "sourceMap": true,
     "strictPropertyInitialization": false,
     "declaration": true,

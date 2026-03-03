@@ -52,5 +52,8 @@
     "esbuild": "0.27.2",
     "fs-extra": "^11.3.3",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "inversify": "^7.10.8"
   }
 }
