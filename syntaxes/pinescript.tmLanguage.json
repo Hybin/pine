@@ -131,6 +131,10 @@
 				{
 					"name": "keyword.operator.logical.pinescript",
 					"match": "&&|\\|\\|"
+				},
+				{
+					"name": "keyword.operator.arrow.pinescript",
+					"match": "=>"
 				}
 			]
 		},

@@ -27,10 +27,10 @@ async function build() {
   await emptyDir('./artifacts');
 
   const context = await esbuild.context({
-    entryPoints: ['./src/extension.ts'],
+    entryPoints: ['./src/extension.ts', './src/server.ts'],
     bundle: true,
     format: 'cjs',
-    outfile: './artifacts/extension.js',
+    outdir: './artifacts',
     platform: 'node',
     external: ['vscode'],
     target: 'es2020',

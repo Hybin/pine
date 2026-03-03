@@ -54,6 +54,9 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "inversify": "^7.10.8"
+    "inversify": "^7.10.8",
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.11"
   }
 }
